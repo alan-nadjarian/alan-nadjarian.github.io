@@ -3,32 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alan Nadjarian | Portfolio</title>
+    <title>Alan Nadjarian | Mechatronics Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <h1>Alan Nadjarian</h1>
-        <nav>
-            <a href="#experience" class="nav-btn">Experience</a>
-            <a href="#experience-abroad" class="nav-btn">Experience Abroad</a>
-            <a href="#skills" class="nav-btn">Skills</a>
-            <a href="#contact" class="nav-btn">Contact</a>
-        </nav>
+        <div class="header-container">
+            <div class="logo-area">
+                <h1>Alan Nadjarian</h1>
+                <p class="subtitle" data-en="Mechatronics Engineer • Thermal & Industrial Systems" data-pt="Engenheiro Mecatrônico • Sistemas Térmicos e Industriais">Mechatronics Engineer • Thermal & Industrial Systems</p>
+            </div>
+            <div class="nav-right">
+                <nav>
+                    <a href="#about" data-en="About" data-pt="Sobre">About</a>
+                    <a href="#skills" data-en="Skills" data-pt="Habilidades">Skills</a>
+                    <a href="#projects" data-en="Special Projects" data-pt="Projetos Especiais">Special Projects</a>
+                    <a href="#experience" data-en="Experience" data-pt="Experiência">Experience</a>
+                </nav>
+                <button id="lang-toggle" class="lang-btn">PT-BR</button>
+            </div>
+        </div>
     </header>
 
-    <main class="container">
+    <section id="about" class="hero">
+        <div class="container hero-content">
+            <h2 data-en="Engineering Complex Solutions" data-pt="Projetando Soluções Complexas">Engineering Complex Solutions</h2>
+            <p data-en="Mechatronics Engineer with extensive experience specialized in the entire product lifecycle management (PLM) of industrial refrigeration and thermal engineering solutions. Expert in custom thermal systems design, process automation, and bridging structural mechanical designs with smart automation logic." 
+               data-pt="Engenheiro Mecatrônico com ampla experiência especializada no gerenciamento do ciclo de vida completo de produtos (PLM) e soluções de refrigeração industrial e engenharia térmica. Especialista em projetos de sistemas térmicos customizados, automação de processos e integração de projetos mecânicos estruturais com lógica de automação inteligente.">
+               Mechatronics Engineer with extensive experience specialized in the entire product lifecycle management (PLM) of industrial refrigeration and thermal engineering solutions. Expert in custom thermal systems design, process automation, and bridging structural mechanical designs with smart automation logic.
+            </p>
+        </div>
+    </section>
 
-        <section id="experience" class="project-card">
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h3 class="section-title" data-en="Technical Core" data-pt="Núcleo Técnico">Technical Core</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4 data-en="Engineering & CAD" data-pt="Engenharia e CAD">Engineering & CAD</h4>
+                    <ul>
+                        <li>SolidWorks & CATIA 3DEXPERIENCE</li>
+                        <li data-en="Thermal & Fluid Dynamics Systems" data-pt="Sistemas Térmicos e Fluido-Dinâmicos">Thermal & Fluid Dynamics Systems</li>
+                        <li data-en="Product Lifecycle Management (PLM)" data-pt="Gerenciamento de Ciclo de Vida (PLM)">Product Lifecycle Management (PLM)</li>
+                        <li data-en="Sheet Metal & Structural Design" data-pt="Chapas Metálicas e Elementos Estruturais">Sheet Metal & Structural Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4 data-en="Automation & Hardware" data-pt="Automação e Hardware">Automation & Hardware</h4>
+                    <ul>
+                        <li data-en="Industrial Automation & Control Logic" data-pt="Automação Industrial e Lógica de Controle">Industrial Automation & Control Logic</li>
+                        <li data-en="PCB Design (KiCad / EasyEDA)" data-pt="Design de PCI (KiCad / EasyEDA)">PCB Design (KiCad / EasyEDA)</li>
+                        <li data-en="Hardware Integration & Prototyping" data-pt="Integração de Hardware e Prototipagem">Hardware Integration & Prototyping</li>
+                        <li>Docker & Self-Hosted Infrastructure</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main id="projects" class="container">
+        <h3 class="section-title" data-en="Specialized Projects Showcase" data-pt="Vitrine de Projetos Especiais">Specialized Projects Showcase</h3>
+
+        <section class="project-card">
             <div class="project-image">
                 <img src="chiller.jpg" alt="Water-cooled chiller">
             </div>
             <div class="project-info">
+                <span class="tag">Thermal Design / Automation</span>
                 <h2>E-COLD HDW 240 - Water-cooled chiller</h2>
-                <p>Chiller for high capacities, E-COLD family line developed while working for Frigocenter. Equipped with 2 trios (3-compressor layout), brazed plate heat exchanger, hydraulic pumps skid, and shell-and-tube condenser.</p>
-                <p>This model specifically will operate for air-conditioned areas of an industry.</p>
-                <p>Its structure was developed with laser-cut sheet metal and electrostatic painting. It uses Nuklwo FS software, which was developed by the Automation team at Frigocenter, allowing users to easily control the equipment's parameters and set-point temperature remotely.</p>
+                <div class="lang-content" data-en="Chiller for high capacities, E-COLD family line developed while working for Frigocenter. Equipped with 2 trios (3-compressor layout), brazed plate heat exchanger, hydraulic pumps skid, and shell-and-tube condenser. This model specifically will operate for air-conditioned areas of an industry. Its structure was developed with laser-cut sheet metal and electrostatic painting. It uses Nuklwo FS software, which was developed by the Automation team at Frigocenter, allowing users to easily control the equipment's parameters and set-point temperature remotely." 
+                     data-pt="Chiller para altas capacidades, linha da família E-COLD desenvolvida durante atuação na Frigocenter. Equipado com 2 trios (layout de 3 compressores), trocador de calor a placas brasadas, skid de bombas hidráulicas e condensador casco e tubo. Este modelo operará especificamente para áreas climatizadas industriais. Sua estrutura foi desenvolvida com chapas metálicas cortadas a laser e pintura eletrostática. Utiliza o software Nuklwo FS, desenvolvido pela equipe de Automação da Frigocenter, permitindo controle remoto de parâmetros e temperatura de set-point.">
+                     Chiller for high capacities, E-COLD family line developed while working for Frigocenter. Equipped with 2 trios (3-compressor layout), brazed plate heat exchanger, hydraulic pumps skid, and shell-and-tube condenser. This model specifically will operate for air-conditioned areas of an industry. Its structure was developed with laser-cut sheet metal and electrostatic painting. It uses Nuklwo FS software, which was developed by the Automation team at Frigocenter, allowing users to easily control the equipment's parameters and set-point temperature remotely.
+                </div>
             </div>
         </section>
 
@@ -37,22 +84,69 @@
                 <img src="tunnel.jpg" alt="Blast-chilling static tunnel">
             </div>
             <div class="project-info">
+                <span class="tag">Industrial Refrigeration</span>
                 <h2>Blast-chilling static tunnel</h2>
-                <p>This model is used at the end of production lines to quickly freeze food to later be stored. Commonly used for meat and bread.</p>
-                <p>Frigocenter manufacturers 3 models of this equipment:</p>
-                <ul class="spec-list">
-                    <li>4 food carts</li>
-                    <li>7 food carts</li>
-                    <li>10 food carts</li>
-                </ul>
+                <div class="lang-content" data-en="This model is used at the end of production lines to quickly freeze food to later be stored. Commonly used for meat and bread. Manufactured configurations include modular scaling setups: 4 food carts, 7 food carts, and 10 food carts capacity profiles." 
+                     data-pt="Este modelo é utilizado no final de linhas de produção para congelar rapidamente alimentos para posterior armazenamento. Comumente utilizado para carnes e pães. As configurações fabricadas incluem perfis modulares escaláveis para capacidades de: 4 carrinhos, 7 carrinhos e 10 carrinhos de alimentos.">
+                     This model is used at the end of production lines to quickly freeze food to later be stored. Commonly used for meat and bread. Manufactured configurations include modular scaling setups: 4 food carts, 7 food carts, and 10 food carts capacity profiles.
+                </div>
             </div>
         </section>
-
     </main>
 
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h3 class="section-title" data-en="Professional Experience" data-pt="Experiência Profissional">Professional Experience</h3>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <h4>Mecalor</h4>
+                        <p class="date" data-en="2024 - Present" data-pt="2024 - Presente">2024 - Present</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 data-en="Designer of Special Projects" data-pt="Projetista de Projetos Especiais">Designer of Special Projects</h5>
+                        <p data-en="Engineering specialized custom industrial thermal control systems and managing advanced fluid mechanics layouts, structural casing design, and cross-functional product data structures." 
+                           data-pt="Projetando sistemas industriais customizados especiais de controle térmico e gerenciando layouts avançados de mecânica dos fluidos, design de carenagens estruturais e estruturas de dados de produtos multifuncionais.">
+                           Engineering specialized custom industrial thermal control systems and managing advanced fluid mechanics layouts, structural casing design, and cross-functional product data structures.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-meta">
+                        <h4>Frigocenter</h4>
+                        <p class="date">2014 - 2024</p>
+                    </div>
+                    <div class="timeline-content">
+                        <h5 data-en="Mechatronics Engineer / Mechanical Designer" data-pt="Engenheiro Mecatrônico / Projetista Mecânico">Mechatronics Engineer / Mechanical Designer</h5>
+                        <p data-en="Led development of large-scale industrial refrigeration units, custom chiller configurations, and blast-freezing layouts. Integrated instrumentation, sensors, and remote software interfaces with mechanical systems." 
+                           data-pt="Liderou o desenvolvimento de unidades de refrigeração industrial de grande porte, configurações customizadas de chillers e layouts de túneis de congelamento rápido. Integrou instrumentação, sensores e interfaces de software remotas com sistemas mecânicos.">
+                           Led development of large-scale industrial refrigeration units, custom chiller configurations, and blast-freezing layouts. Integrated instrumentation, sensors, and remote software interfaces with mechanical systems.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer>
-        <p>&copy; 2026 Alan Nadjarian. All Rights Reserved.</p>
+        <p>&copy; 2026 Alan Nadjarian. <span data-en="Mechatronics Engineering Portfolio" data-pt="Portfólio de Engenharia Mecatrônica">Mechatronics Engineering Portfolio</span></p>
     </footer>
 
+    <script>
+        const langToggle = document.getElementById('lang-toggle');
+        let currentLang = 'en';
+
+        langToggle.addEventListener('click', () => {
+            currentLang = currentLang === 'en' ? 'pt' : 'en';
+            langToggle.textContent = currentLang === 'en' ? 'PT-BR' : 'EN';
+            
+            // Switch text content for all components with data language attributes
+            document.querySelectorAll('[data-en]').forEach(element => {
+                element.textContent = element.getAttribute(`data-${currentLang}`);
+            });
+        });
+    </script>
 </body>
 </html>
