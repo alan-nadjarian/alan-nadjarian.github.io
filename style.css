@@ -1,69 +1,198 @@
-/* Global Styles */
+/* Engineering Minimalist Theme Variables */
+:root {
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --accent-color: #38bdf8;
+    --text-main: #f1f5f9;
+    --text-muted: #94a3b8;
+    --border-color: #334155;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
 }
 
 body {
-    background-color: #f8f9fa;
-    color: #333;
-    line-height: 1.6;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
-/* Header & Navigation layout matching your Google Site */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Precise Header & Nav Design */
 header {
-    background: linear-gradient(135deg, #2c3e50, #34495e);
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
+    background-color: rgba(15, 23, 42, 0.9);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border-color);
+    padding: 16px 0;
+}
+
+.header-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+header .subtitle {
+    font-size: 0.8rem;
+    color: var(--accent-color);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 24px;
 }
 
 nav {
     display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.nav-btn {
-    background-color: #2980b9;
-    color: white;
+nav a {
+    color: var(--text-muted);
     text-decoration: none;
-    padding: 10px 25px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--text-main);
+}
+
+/* Language Toggle Styling */
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 4px 10px;
     border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.lang-btn:hover {
+    background: var(--accent-color);
+    color: var(--bg-primary);
+}
+
+/* Modern Hero / Summary Layout */
+.hero {
+    padding: 80px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.hero h2 {
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+    font-weight: 600;
+}
+
+.hero p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 800px;
+}
+
+/* Core Technical Grid Layout */
+.skills-section {
+    padding: 60px 0;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 32px;
+    font-weight: 600;
+    position: relative;
+    padding-left: 14px;
+}
+
+.section-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 4px;
+    background: var(--accent-color);
+    border-radius: 2px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.skill-category {
+    background: var(--bg-primary);
+    padding: 24px;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+}
+
+.skill-category h4 {
+    margin-bottom: 16px;
+    color: var(--accent-color);
+    font-size: 1.1rem;
+}
+
+.skill-category ul {
+    list-style: none;
+}
+
+.skill-category li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 8px;
+    color: var(--text-muted);
     font-size: 0.95rem;
-    transition: background 0.3s ease;
 }
 
-.nav-btn:hover {
-    background-color: #1f618d;
+.skill-category li::before {
+    content: "▫";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color);
 }
 
-/* Content Container */
-.container {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 0 20px;
+/* Industrial Project Display Cards */
+#projects {
+    padding: 60px 24px;
 }
 
-/* Project Cards Layout alternating left/right images */
 .project-card {
     display: flex;
-    background: white;
-    margin-bottom: 40px;
+    background: var(--bg-secondary);
+    margin-bottom: 32px;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    align-items: center;
+    border: 1px solid var(--border-color);
 }
 
 .project-card.reversed {
@@ -73,80 +202,137 @@ nav {
 .project-image {
     flex: 1;
     min-width: 40%;
-    background: #ebeef0;
+    background: #1e293b;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 16px;
+    border-right: 1px solid var(--border-color);
+}
+
+.project-card.reversed .project-image {
+    border-right: none;
+    border-left: 1px solid var(--border-color);
 }
 
 .project-image img {
     max-width: 100%;
     height: auto;
-    border: 1px solid #e0e0e0;
     border-radius: 4px;
+    filter: brightness(0.95);
 }
 
 .project-info {
     flex: 1.5;
-    padding: 40px;
+    padding: 32px;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent-color);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+    font-weight: 600;
 }
 
 .project-info h2 {
-    color: #2c3e50;
-    font-size: 1.6rem;
-    margin-bottom: 15px;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
     font-weight: 500;
 }
 
-.project-info p {
-    margin-bottom: 15px;
-    color: #555;
+.project-info .lang-content {
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
-/* Checked List styling */
-.spec-list {
-    list-style: none;
+/* Professional Engineering Timeline */
+.experience-section {
+    padding: 60px 0;
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
 }
 
-.spec-list li {
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.timeline-item {
+    display: flex;
+    border-left: 2px solid var(--border-color);
+    padding-left: 24px;
     position: relative;
-    padding-left: 25px;
-    margin-bottom: 8px;
-    color: #555;
 }
 
-.spec-list li::before {
-    content: "✓";
+.timeline-item::before {
+    content: '';
     position: absolute;
-    left: 0;
-    color: #6c5ce7;
-    font-weight: bold;
-    background: #f0edff;
-    width: 18px;
-    height: 18px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
-    font-size: 0.75rem;
+    left: -6px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+    background: var(--bg-primary);
+    border: 2px solid var(--accent-color);
+    border-radius: 50%;
+}
+
+.timeline-meta {
+    min-width: 180px;
+}
+
+.timeline-meta h4 {
+    font-size: 1.1rem;
+    color: var(--text-main);
+}
+
+.timeline-meta .date {
+    font-size: 0.85rem;
+    color: var(--accent-color);
+}
+
+.timeline-content h5 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    max-width: 750px;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    color: #777;
+    padding: 40px;
+    color: var(--text-muted);
     font-size: 0.85rem;
-    border-top: 1px solid #e0e0e0;
-    margin-top: 60px;
+    border-top: 1px solid var(--border-color);
 }
 
-/* Responsive view for phones/tablets */
+/* Mobile Configurations */
 @media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
     .project-card, .project-card.reversed {
         flex-direction: column;
     }
-    .project-info {
-        padding: 20px;
+    .project-image {
+        border-right: none;
+        border-left: none;
+        border-bottom: 1px solid var(--border-color);
+    }
+    .timeline-item {
+        flex-direction: column;
+        gap: 8px;
     }
 }
