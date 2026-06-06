@@ -416,3 +416,59 @@ footer {
         gap: 8px;
     }
 }
+
+/* Infinite Carousel Ticker Styles */
+.carousel-section {
+    padding: 60px 0 30px 0;
+    background-color: #0f172a;
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: #1e293b;
+    border-top: 1px solid #334155;
+    border-bottom: 1px solid #334155;
+    padding: 24px 0;
+    display: flex;
+}
+
+.marquee-track {
+    display: flex;
+    width: calc(160px * 14); /* 160px width * 14 items total (including duplicates) */
+    animation: scrollTicker 30s linear infinite;
+}
+
+/* Pause the scrolling effect if a user hovers their mouse over it */
+.marquee-track:hover {
+    animation-play-state: paused;
+}
+
+.marquee-item {
+    width: 160px;
+    height: 60px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 0 15px;
+    flex-shrink: 0;
+}
+
+.marquee-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Infinite Keyframes Calculation */
+@keyframes scrollTicker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-160px * 7)); /* Exact width translation of half the pipeline */
+    }
+}
